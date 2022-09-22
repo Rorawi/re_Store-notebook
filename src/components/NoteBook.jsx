@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card,Modal } from "react-bootstrap";
+import { Button, Card,Col,Modal } from "react-bootstrap";
 import EditNotes from "./EditNotes";
 import { useState } from 'react';
 import { connect,useDispatch } from 'react-redux';
@@ -29,9 +29,9 @@ const NoteBook = (props) => {
         </Modal.Body>
       </Modal>
 
+<Col>
 
-            <br/><br/><br/>
-             <Card style={{ width: '18rem' }}>
+<Card style={{ width: '18rem' }} className='output'>
       <Card.Body>
         <Card.Title>Notes title:{props.data.title}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted"> Date:{props.data.date}</Card.Subtitle>
@@ -45,6 +45,7 @@ const NoteBook = (props) => {
         <Button  onClick={handleDelete}>Delete</Button>
       </Card.Body>
     </Card>
+</Col>
         </div>
     );
 }

@@ -7,7 +7,7 @@ const SeeAllNotes = (props) => {
     return (
         <div>
             <Container>
-                <Row>        
+                <Row md={3}>        
                 {props.data.map((data,index) => {
                         return (
                             <NoteBook data={data}

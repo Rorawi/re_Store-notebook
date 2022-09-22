@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
  import {addUser} from "../action/userAction";
 import { useState } from 'react';
 import {v4 as uuid } from "uuid"
+import { Icon } from '@iconify/react';
 // import { Form,Button } from "react-bootstrap"
 
 const AddNotes = (props) => {
@@ -23,23 +24,32 @@ const handleSubmit = (event) => {
 
     return (
         <div>
-             <form action="form">
-             <br/><br/>
-                <label htmlFor="Notes title">NOTES TITLE</label>
-                <input type="text" name="title" id="title"  placeholder="title here" value={title} onChange={(e) =>{
+             <form action="form" className='form'>
+             <div className="input-group">
+                <input className='input' type="text" name="title" id="title" value={title} onChange={(e) =>{
                         setTitle(e.target.value);
-                    }}/><br/><br/>
+                    }}/>
+             <label htmlFor="Notes title" className='placeholder'>NOTES TITLE</label>
+             </div>
 
-                <label htmlFor="Notes title">Date Recorded</label>
-                <input type="text" name="title" id="title"  placeholder="title here" value={date} onChange={(e) =>{
+               <div className="input-group">
+                 
+               <input className='input' type="text" name="title" id="title" value={date} onChange={(e) =>{
                         setDate(e.target.value);
-                    }}/><br/><br/>
+                    }}/>
+                    <label htmlFor="Notes title" className='placeholder'>Date Recorded</label>
+               </div>
 
-                <label htmlFor="Notes title">Note Text</label>
-                <textarea type="text" name="title" id="title"  placeholder="title here" value={text} onChange={(e) =>{
+              
+               <div className="input-group">
+               <textarea className='input' type="text" name="title" id="title"  value={text} onChange={(e) =>{
                         setText(e.target.value);
-                    }}></textarea><br/><br/>
-                <button onClick={handleSubmit}>Submit</button>
+                    }}></textarea>
+                      <label htmlFor="Notes title" className='placeholder'>Note Text</label>
+               </div>
+               <div className="submit-btn">
+                 <button onClick={handleSubmit}>Submit<Icon icon="radix-icons:check" height={20} /></button>
+               </div>
              </form>
         </div>
     );

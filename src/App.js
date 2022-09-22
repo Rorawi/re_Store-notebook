@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container,Row,Col } from "react-bootstrap";
 import AddNotes from './components/AddNotes';
 import SeeAllNotes from './components/SeeAllNotes';
+import './myStyles.css'
 function App() {
   // const [notes, setNotes] = useState([
   //   {
@@ -27,10 +28,13 @@ function App() {
    <>
    <Container>
     <Row>
-      <Col>
+      <Col className='addNotes'>
       <AddNotes/>
       </Col>
-      <Col>
+    </Row>
+
+    <Row>
+    <Col>
      <SeeAllNotes />
       </Col>
     </Row>
