@@ -104,3 +104,56 @@
     background-color: #fff;
     border: 2px solid #ffc13d;
  }
+
+ 
+.edit-form {
+    padding: 8px 10px;
+    width: 100%;
+    width: 460px;
+    box-sizing: border-box;
+    outline: none;
+    border: 3px solid #FBE4B4;
+    border-radius: 3px;
+}
+
+.edit-input-group {
+    position: relative;
+    margin: 30px 0;
+}
+
+.edit-input {
+    padding: 25px 10px 10px;
+    width: 100%;
+    max-width: 200px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #D9D9D9;
+    border: 2px solid #9d9d9d;
+    border-radius: 3px;
+}
+
+.edit-placeholder {
+    position: absolute;
+    top: 7px;
+    left: 8px;
+    font-size: 11px;
+    padding: 0px;
+    transition: 0.3s;
+    font-weight: 500;
+    background-color: #D9D9D9;
+    text-transform: uppercase;
+}
+
+.edit-input:focus + .edit-placeholder {
+    top: -20px;
+    color:rgba(41, 29, 29, 0.895);
+    background: #fff;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.edit-input-group textarea {
+    resize: none;
+     height: 20vh;   
+    max-width: 400px;
+ }

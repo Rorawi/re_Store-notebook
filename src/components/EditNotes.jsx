@@ -2,6 +2,7 @@ import React,{ useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { editUser } from '../action/userAction';
 import { v4 as uuid } from "uuid"
+import { Icon } from '@iconify/react';
 
 const EditNotes = (props) => {
 
@@ -22,25 +23,35 @@ const EditNotes = (props) => {
     
         return (
             <div>
-                 <form action="form">
-                 <br/><br/>
-                    <label htmlFor="Notes title">NOTES TITLE</label>
-                    <input type="text" name="title" id="title"  placeholder="title here" value={title} onChange={(e) =>{
-                            setTitle(e.target.value);
-                        }}/><br/><br/>
-    
-                    <label htmlFor="Notes title">Date Recorded</label>
-                    <input type="text" name="title" id="title"  placeholder="title here" value={date} onChange={(e) =>{
-                            setDate(e.target.value);
-                        }}/><br/><br/>
-    
-                    <label htmlFor="Notes title">Note Text</label>
-                    <textarea type="text" name="title" id="title"  placeholder="title here" value={text} onChange={(e) =>{
-                            setText(e.target.value);
-                        }}></textarea><br/><br/>
-                    <button onClick={handleSubmit}>Submit</button>
-                 </form>
+            <form action="form" className='edit-form'>
+            <div className="edit-input-group">
+               <input className='edit-input' type="text" name="title" id="title" value={title} onChange={(e) =>{
+                       setTitle(e.target.value);
+                   }}/>
+            <label htmlFor="Notes title" className='edit-placeholder'>NOTES TITLE</label>
             </div>
+
+              <div className="edit-input-group">
+                
+              <input className='edit-input' type="text" name="title" id="title" value={date} onChange={(e) =>{
+                       setDate(e.target.value);
+                   }}/>
+                   <label htmlFor="Notes title" className='edit-placeholder'>Date Recorded</label>
+              </div>
+
+             
+              <div className="edit-input-group">
+              <textarea className='edit-input' type="text" name="title" id="title"  value={text} onChange={(e) =>{
+                       setText(e.target.value);
+                   }}></textarea>
+                     <label htmlFor="Notes title" className='edit-placeholder'>Note Text</label>
+              </div>
+              <div className="submit-btn">
+                <button onClick={handleSubmit}>Submit<Icon icon="radix-icons:check" height={20} /></button>
+              </div>
+            </form>
+       </div>
+       
         );
     }
 
