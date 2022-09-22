@@ -3,15 +3,15 @@ let initialState =
     {
         datas:[
         {
-          title:"React",
+          title:"React is awesome",
           date: "22/03/2022",
           text: "I was learning react",
           id:uuid()
         },
         {
-          title:"React",
+          title:"Redux is awesome",
           date: "22/03/2022",
-          text: "I was learning react",
+          text: "I was learning redux",
           id:uuid()
         },
         {

@@ -20,6 +20,7 @@ const NoteBook = (props) => {
     
     return (
         <div>
+          
             <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
@@ -29,20 +30,21 @@ const NoteBook = (props) => {
         </Modal.Body>
       </Modal>
 
-<Col>
 
+<Col className='output-container'>        
 <Card style={{ width: '18rem' }} className='output'>
       <Card.Body>
-        <Card.Title>Notes title:{props.data.title}</Card.Title>
+        <Card.Text>Notes title:{props.data.title}</Card.Text>
         <Card.Subtitle className="mb-2 text-muted"> Date:{props.data.date}</Card.Subtitle>
         <Card.Text>
          Note text:{props.data.text}
         </Card.Text>
-        <Card.Link href="#" onClick={handleShow}>Edit</Card.Link>
+      <div className="button-div">
+          <button href="#" onClick={handleShow}>Edit</button>
         {/* <Button onClick={(e)=>{dispatch(deleteUser(props.data.id))}}>delete</Button> */}
-
-
-        <Button  onClick={handleDelete}>Delete</Button>
+        <button  onClick={handleDelete}>Delete</button>
+        {/* <button>View</button> */}
+      </div>
       </Card.Body>
     </Card>
 </Col>

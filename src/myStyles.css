@@ -83,6 +83,24 @@
     border: 2px solid #ffc13d;
  }
 
+.output-container {
+    margin: 10px 0 25px;
+}
+
  .output {
     background-color: #FBE4B4;
+ }
+
+ .button-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .button-div button {
+    margin: 0 5px;
+    padding: 4px 15px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 2px solid #ffc13d;
  }
